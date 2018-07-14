@@ -3,9 +3,13 @@
 <head>
     <title>Newsletter</title>
 
+    <link rel="preload" href="styles/styles.css" as="style">
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Nunito:300,400" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Nunito:300,400" rel="stylesheet" crossorigin>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
 
     <meta charset="UTF-8">
@@ -16,38 +20,44 @@
 <body>
     <section class="newsletter u-shadow-full">
 
-        <header class="newsletter__header">
-            <h1 class="newsletter__title">
-                <a href="https://filisantillan.com" class="newsletter__link u-display-in-block">
-                    <span class="newsletter__text u-text-light">Fili</span>
-                    <strong class="newsletter__text u-text-bold">Santillán</strong>
-                </a>
-            </h1>
-        </header>
-
-        <div class="newsletter__description">
-            <strong class="newsletter__text">
-                Únete a mi newsletter semanal en donde te voy a compartir contigo: artículos, videos, noticias y todo entorno a desarrollo frontend.
-            </strong>
-        </div>
-
         <div class="newsletter__details">
-            <form action="https://filisantillan.us10.list-manage.com/subscribe/post?u=95ea8fe3ca6aa8d832c3cf074&amp;id=3592928afa" 
-                method="post" 
-                id="mc-embedded-subscribe-form" 
-                name="mc-embedded-subscribe-form" 
-                class="subscribe"
-                target="_blank" novalidate>
+            <div class="newsletter-wrapper">
                 
-                <div class="subscribe-wrapper">
-                
-                    <input type="email" value="" name="EMAIL" class="subscribe__email" id="mce-EMAIL" placeholder="Email" required>
-            
-                    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="subscribe__button u-center-content">
-                        <span class="subscribe__icon fas fa-arrow-right"></span>
-                    </button>
+                <header class="newsletter__header">
+                    <h1 class="newsletter__title">
+                        <a href="https://filisantillan.com" class="newsletter__link u-display-in-block" rel="noopener noreferrer" target="_blank">
+                            <span class="newsletter__text u-text-light">Fili</span>
+                            <strong class="newsletter__text u-text-bold">Santillán</strong>
+                        </a>
+                    </h1>
+                </header>
+        
+                <div class="newsletter__description">
+                    <p class="newsletter__text">
+                        Únete a mi newsletter semanal en donde voy a compartir contigo: artículos, videos, noticias y todo entorno a Desarrollo Frontend.
+                    </p>
                 </div>
-            </form>
+        
+                <div class="newsletter__formWrapper">
+                    <form action="https://filisantillan.us10.list-manage.com/subscribe/post?u=95ea8fe3ca6aa8d832c3cf074&amp;id=3592928afa" 
+                        method="post" 
+                        id="mc-embedded-subscribe-form"
+                        name="mc-embedded-subscribe-form"
+                        class="newsletter__form"
+                        target="_blank" novalidate>
+                        
+                        <div class="newsletter__inputWrapper">
+                        
+                            <input type="email" value="" name="EMAIL" class="newsletter__email" id="mce-EMAIL" placeholder="Email" required>
+                    
+                            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter__button u-center-content">
+                                <span class="newsletter__icon fas fa-arrow-right"></span>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
         </div>
 
         <div class="newsletter__image"></div>
